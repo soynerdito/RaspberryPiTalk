@@ -24,6 +24,8 @@ client.connect("iot.eclipse.org", 1883, 60)
 # handles reconnecting.
 # Other loop*() functions are available that give a threaded interface and a
 # manual interface.
+
 client.subscribe(msg_topic, 0)
+client.publish("my/topic", "hello world", 1)
 
 client.loop_forever()
